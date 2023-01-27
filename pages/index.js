@@ -22,7 +22,7 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      await vanaApiPost(`jobs/text-to-image`, {
+      await vanaApiPost(`images/generations`, {
         prompt: prompt.replace(/\bme\b/i, "{target_token}"), // Replace the word "me" with "{target_token}" in the prompt to include yourself in the picture
         exhibit_name: "text-to-image", // How your images are grouped in your gallery. For this demo, all images will be grouped in the `text-to-image` exhibit
         n_samples: 5,
